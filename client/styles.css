@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    background-color: rgb(24, 32, 32);
+    justify-content: center;
+}
+section {
+    padding: 15px;
+    /* border: 5px solid green; */
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 80vw;
+}
+
+input { 
+    background-color: rgb(36, 48, 48);
+    color: green;
+    width: 40vw;
+    padding: 10px;
+    margin: 20px;
+    font-size: large;
+}
+
+#title{
+    font-size: xx-large;
+}
+::placeholder{
+    color: green;
+}
+
+Button {
+    padding: 5px;
+    margin: 10px;
+    color: green;
+    background-color: rgb(36, 48, 48);
+    font-size: x-large
+}
+

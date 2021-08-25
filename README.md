@@ -8,33 +8,34 @@
 - The user should be able to access their post using that show path even after a server restart
 - Edit and delete functionality is not required
 
-# Installation & Usage
+# Installation
 
 ### Installation
 
-### Usage
+Clone or download the repo.
+cd into server and run the following:
+To run the app: `docker-compose-up`
+This will run the api on localhost:3000
+
+To stop the app and remove all resources: `docker-compose down --volumes --remove-orphans docker volume prune --force`
 
 ## Change Log
 
-###
+### .gitignore, api/controllers/post.js, api/dbconfig/dev_seeds.sql, api/dbconfig/init.js, api/dbconfig/seedDev.js, api/index.js, api/models/Post.js, api/package-lock.json, api/package.json, api/server.js
 
-[x]
+[x] Server Setup
 
-###
+### client/index.html, client/styles.css
 
-[x]
+[x] Basic terminal design of site
 
-###
+### client/front.js, client/index.html, client/post.html, client/styles.css
 
-[x]
+[x] front end js
 
-###
+### api/controllers/post.js, api/models/Post.js, api/routes/post.js
 
-[x]
-
-###
-
-[x]
+[x] Added posts creation
 
 # Technologies used
 
@@ -43,9 +44,16 @@
 - Node
 - Express
 - Javascript
+- Docker
 
 # Wins and Challenges
 
 ## Wins
 
+### Implementation of Docker
+
+### Gaining a better understanding of the backend
+
 ## Challenges
+
+### Linking files together correctly

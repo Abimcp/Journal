@@ -4,9 +4,8 @@ const postController = require("../controllers/post");
 
 router.get("/", postController.index);
 router.get("/:id", postController.show);
+router.post("/", postController.create);
 
 module.exports = router;
 
-// get post all
-// get post by all date
-// get post by id
+

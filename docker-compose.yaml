@@ -1,0 +1,34 @@
+version: "3"
+services:
+  api:
+    image: node:15.12
+    working_dir: /api
+    ports:
+      - "3000:3000"
+    environment:
+      - PGUSER=journaluser
+      - PGHOST=db
+      - PGPASSWORD=journalpass
+      - PGDATABASE=journaldb
+      - PGPORT=5432
+    volumes:
+      - type: bind
+        source: ./api
+        target: /api
+    command: bash -c "npm install && npm run seedDev && npm start"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12.4
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=journaluser
+      - POSTGRES_DB=journaldb
+      - POSTGRES_PASSWORD=journalpass
+    volumes:
+      - "./db/migrations:/docker-entrypoint-initdb.d/:ro"
+
+volumes:
+  dbdata:

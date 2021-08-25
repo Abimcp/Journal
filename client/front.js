@@ -1,4 +1,4 @@
-
+const postController = require("../controllers/post");
 
 document.getElementById('publish').addEventListener('submit', createPost(e));
 
@@ -21,49 +21,6 @@ const publishPost = event => {
         .then(data => console.log(data))
         .catch(error => console.log(error, 'Error posting entry'));
 };
-
-
-// async function publishPost(e){
-//     e.preventDefault();
-//     try {
-//         const options = {
-//             method: 'POST',
-//             headers: { "Content-Type": "application/json" },
-//             body: JSON.stringify(Object.fromposts(new FormData(e.target)))
-//         }
-        
-//         const response = await fetch('http://localhost:3000/posts', options);
-//         const { id, err } = await response.json();
-//         if(err) { 
-//             throw Error(err) 
-//         } else {
-//             window.location.hash = `#posts/${id}`
-//         }
-//     } catch (err) {
-//         console.warn(err);
-//     }
-
-// static async publishPost(data) {
-//     return new Promise (async(resolve,reject) => {
-//         try{
-//             console.log("I'm working!");
-//             const {title, pseudonym, date, body} = data;
-//             const result = await db.query(
-//                 "INSERT INTO posts( title, date, pseudonym, body)  VALUES ($1, $3, $2, $4) "
-//             )
-//         } catch (err) {
-//             reject('Book could not be created');
-//         }
-//     });
-
-//     })
-
-   
-    
-    ////save data to db
-
-};
-
 
 
 

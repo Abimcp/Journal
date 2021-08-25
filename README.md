@@ -48,4 +48,8 @@
 
 ## Wins
 
+### Using Docker
+### Gaining a better understanding of the backend 
+
 ## Challenges
+### 
